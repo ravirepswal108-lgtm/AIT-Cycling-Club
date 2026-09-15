@@ -243,8 +243,9 @@ export const CyclothonPage: React.FC = () => {
             </GlassButton>
           </div>
 
-          <div className="pt-2 text-[11px] font-mono text-stone-400">
-            Official Registration Portal is hosted on Google Forms · Placeholder constant: <code className="text-[#fbbf24]">REGISTER_FORM_URL</code>
+          <div className="pt-2 text-xs text-stone-400 flex items-center justify-center gap-2">
+            <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span>Official Registrations Open · Direct Link to Google Form</span>
           </div>
         </div>
       </section>
@@ -569,9 +570,8 @@ export const CyclothonPage: React.FC = () => {
               </GlassButton>
             </div>
 
-            <p className="text-[11px] font-mono text-stone-400 pt-2">
-              Note: The link uses our placeholder constant <code className="text-[#fbbf24]">REGISTER_FORM_URL</code>. 
-              Paste your live form URL into <code className="text-stone-300">src/config/constants.ts</code> at any time.
+            <p className="text-xs text-stone-400 pt-2">
+              Instant confirmation will be sent upon completing the official Google Form.
             </p>
           </div>
         </div>
