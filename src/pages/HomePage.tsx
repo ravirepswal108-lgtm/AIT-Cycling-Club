@@ -10,8 +10,7 @@ import {
   COLLEGE_AFFILIATION, 
   CLUB_INSTAGRAM_URL, 
   CLUB_EMAIL, 
-  CLUB_PHONE,
-  ADVENTURE_GALLERY_CARDS
+  CLUB_PHONE
 } from '../config/constants';
 import { 
   Compass, 
@@ -59,8 +58,53 @@ export const HomePage: React.FC = () => {
   };
 
 
-  // Adventure Gallery Cards (Draggable - Configured in src/config/constants.ts)
-  const adventureCards = ADVENTURE_GALLERY_CARDS;
+  // Adventure Gallery Cards (Draggable)
+  const adventureCards = [
+    {
+      id: 'adv-1',
+      title: 'Sinhagad Dawn Echelon',
+      location: 'Sinhagad Ghat, Pune',
+      elevation: '+850m Climb',
+      tag: 'Morning Climb',
+      image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&auto=format&fit=crop&q=80',
+      description: 'Cutting through morning cloud cover on the 9km switchbacks up to the Tanaji Malusare memorial.',
+      glow: 'moss' as const,
+      initialRotation: -2
+    },
+    {
+      id: 'adv-2',
+      title: 'Panshet Reservoir Paceline',
+      location: 'Panshet Backwaters',
+      elevation: '82 km Loop',
+      tag: 'Endurance',
+      image: 'https://images.unsplash.com/photo-1517649763962-0c623266ddc0?w=800&auto=format&fit=crop&q=80',
+      description: 'Tight two-by-two rotating echelon along the glassy waters of Panshet Dam on cool Sunday mornings.',
+      glow: 'amber' as const,
+      initialRotation: 1.5
+    },
+    {
+      id: 'adv-3',
+      title: 'Dighi Ridge Technical Sprint',
+      location: 'Dighi Hills, Pune',
+      elevation: '+320m Repeated',
+      tag: 'Local Base',
+      image: 'https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=800&auto=format&fit=crop&q=80',
+      description: 'Right behind our campus dorms: punchy trail gradients and tarmac sprints before 8 AM lectures.',
+      glow: 'moss' as const,
+      initialRotation: -1
+    },
+    {
+      id: 'adv-4',
+      title: 'Mulshi Valley Century',
+      location: 'Mulshi Ghat Pass',
+      elevation: '115 km Route',
+      tag: 'Century Ride',
+      image: 'https://images.unsplash.com/photo-1474962558142-9ca83af74bb7?w=800&auto=format&fit=crop&q=80',
+      description: '100+ kilometers through the Western Ghat passes, dense foliage, and torrential monsoon mist.',
+      glow: 'amber' as const,
+      initialRotation: 2.5
+    }
+  ];
 
   // Past Activities & Milestones (Draggable)
   const pastActivities = [
