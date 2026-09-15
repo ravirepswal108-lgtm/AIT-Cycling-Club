@@ -26,7 +26,7 @@ export const Footer: React.FC = () => {
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-xl bg-[#84cc16]/10 border border-[#84cc16]/40 flex items-center justify-center p-1.5 shadow-[0_4px_16px_rgba(0,0,0,0.6)]">
                 <img 
-                  src="/images/ait-cycling-logo-light.png" 
+                  src={`${import.meta.env.BASE_URL}images/ait-cycling-logo-light.png`} 
                   alt="AIT Cycling Club Official Logo" 
                   className="w-full h-full object-contain filter drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]"
                 />

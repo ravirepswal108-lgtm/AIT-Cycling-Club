@@ -214,7 +214,7 @@ export const HomePage: React.FC = () => {
             <motion.div variants={heroItemVariants} className="flex justify-center pt-2">
               <div className="relative p-3 rounded-2xl glass-panel border border-[#84cc16]/40 shadow-[0_10px_35px_rgba(0,0,0,0.8),0_0_25px_rgba(132,204,22,0.25)] hover:scale-105 transition-transform duration-300">
                 <img 
-                  src="/images/ait-cycling-logo-light.png" 
+                  src={`${import.meta.env.BASE_URL}images/ait-cycling-logo-light.png`} 
                   alt="Army Institute of Technology Cycling Club Official Crest" 
                   className="w-20 h-20 sm:w-24 sm:h-24 object-contain filter drop-shadow-[0_4px_12px_rgba(132,204,22,0.3)]"
                 />

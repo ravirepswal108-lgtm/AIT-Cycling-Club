@@ -63,7 +63,7 @@ export const Navbar: React.FC = () => {
         >
           <div className="relative w-11 h-11 rounded-xl bg-gradient-to-br from-[#84cc16]/15 via-[#172219]/60 to-[#0e1610]/80 border border-[#84cc16]/40 flex items-center justify-center p-1.5 shadow-[0_4px_16px_rgba(0,0,0,0.6),inset_0_1px_1px_rgba(255,255,255,0.2)] group-hover:border-[#84cc16] group-hover:shadow-[0_0_20px_rgba(132,204,22,0.35)] transition-all">
             <img 
-              src="/images/ait-cycling-logo-light.png" 
+              src={`${import.meta.env.BASE_URL}images/ait-cycling-logo-light.png`} 
               alt="AIT Cycling Club Official Logo" 
               className="w-full h-full object-contain filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
             />

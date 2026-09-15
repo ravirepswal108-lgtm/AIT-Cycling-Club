@@ -30,8 +30,7 @@ const firebaseConfig = {
 
 let app: FirebaseApp | null = null;
 let auth: Auth | null = null;
-const googleProvider = new GoogleAuthProvider();
-googleProvider.setCustomParameters({ prompt: 'select_account' });
+let googleProvider: GoogleAuthProvider | null = null;
 
 try {
   if (!getApps().length) {
@@ -40,6 +39,8 @@ try {
     app = getApps()[0];
   }
   auth = getAuth(app);
+  googleProvider = new GoogleAuthProvider();
+  googleProvider.setCustomParameters({ prompt: 'select_account' });
 } catch (err) {
   console.warn("Firebase initialized with local fallback handler:", err);
 }
@@ -51,7 +52,7 @@ export { auth, googleProvider };
  * Attempts real Firebase popup; if API key is unconfigured, seamlessly authenticates test cyclist
  */
 export async function signInWithGoogle(): Promise<AppUser> {
-  if (auth && import.meta.env.VITE_FIREBASE_API_KEY) {
+  if (auth && googleProvider && import.meta.env.VITE_FIREBASE_API_KEY) {
     try {
       const result = await signInWithPopup(auth, googleProvider);
       return {

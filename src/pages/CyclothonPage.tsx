@@ -173,7 +173,7 @@ export const CyclothonPage: React.FC = () => {
           <div className="flex justify-center pt-2">
             <div className="relative p-2.5 rounded-2xl glass-panel border border-[#d97706]/40 shadow-[0_10px_35px_rgba(0,0,0,0.8),0_0_25px_rgba(217,119,6,0.25)] hover:scale-105 transition-transform duration-300">
               <img 
-                src="/images/ait-cycling-logo-light.png" 
+                src={`${import.meta.env.BASE_URL}images/ait-cycling-logo-light.png`} 
                 alt="AIT Cycling Club Official Logo" 
                 className="w-20 h-20 sm:w-24 sm:h-24 object-contain filter drop-shadow-[0_4px_12px_rgba(217,119,6,0.3)]"
               />
@@ -468,7 +468,7 @@ export const CyclothonPage: React.FC = () => {
               <div className="flex justify-center pb-1">
                 <div className="w-16 h-16 sm:w-20 sm:h-20 p-2 rounded-2xl bg-[#142017]/80 border border-[#84cc16]/40 shadow-[0_4px_16px_rgba(0,0,0,0.6)]">
                   <img 
-                    src="/images/ait-cycling-logo-light.png" 
+                    src={`${import.meta.env.BASE_URL}images/ait-cycling-logo-light.png`} 
                     alt="AIT Cycling Club Official Logo" 
                     className="w-full h-full object-contain filter drop-shadow-[0_2px_8px_rgba(132,204,22,0.3)]"
                   />
